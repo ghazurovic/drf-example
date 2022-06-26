@@ -1,4 +1,4 @@
-.PHONY: docker-run makemigrations migrate showmigrations-app makemigrations-app add-admin
+.PHONY: docker-run makemigrations migrate showmigrations-app makemigrations-app add-admin load-fixtures run-tests
 
 # if arg is not provided, fallback to default conf
 BACKEND_CONF := $(or $(BACKEND_CONF), backend.env)
@@ -23,3 +23,6 @@ add-admin:
 
 load-fixtures:
 	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py loaddata users.json products.json
+
+run-tests:
+	docker exec -it drf-example_backend_1 pytest
