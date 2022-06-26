@@ -5,8 +5,8 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.db.models.functions import Lower
 from django.db.models.query import QuerySet
 from core.helpers.model_manager import get_unique_or_none
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, ProductReview
+from .serializers import ProductSerializer, ProductReviewSerializer
 from core.helpers.pagination import StandardResultsSetPagination
 
 
@@ -95,7 +95,7 @@ class ProductsViewSet(viewsets.ModelViewSet):
             )
 
             page = self.paginate_queryset(queryset)
-            if page is not None:
+            if page is not None and request.query_params.get('page', None):
                 serializer = self.get_serializer(page, many=True)
                 return self.get_paginated_response(serializer.data)
 
@@ -106,3 +106,12 @@ class ProductsViewSet(viewsets.ModelViewSet):
                 {'error': e},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+
+class ProductReviewsViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing, creating,editing and deleting ProductReviewž
+    instances.
+    """
+    queryset = ProductReview.objects.all()
+    serializer_class = ProductReviewSerializer
