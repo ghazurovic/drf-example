@@ -6,6 +6,8 @@ from products.urls import products_api
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from .views import ApiLoginView, ApiLogoutView
+
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -36,7 +38,13 @@ swagger_api = [
     ),
 ]
 
+auth_api = [
+    path('auth/login', ApiLoginView.as_view()),
+    path('auth/logout', ApiLogoutView.as_view()),
+]
+
 api_urls = [
+    path('', include(auth_api)),
     path('', include(products_api)),
 ]
 
