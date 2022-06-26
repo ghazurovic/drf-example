@@ -1,0 +1,86 @@
+[{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$AU7MhYT71XYjUzOF2yk9ne$CvRlrGQUL85DoMseVxeH6La+oYH4DC0EZaa8/m3T6Xw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_user_1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-26T16:18:49Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}, {
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$sluJUjEtv1QxmkXG6c5tEN$NeGvoMrSGZ7SlCeJFmbIlS0zSdHsS6W/MejCbWVsVfA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_user_2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-26T16:44:43.733Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}, {
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$znadGac2gBwuUFS1OmOHEN$lkL93anRkwNbcf4DlOutJlF4jSM/fO0dJZN6IQ6A7+M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_user_3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-26T16:44:48.186Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}, {
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$raxvCYPL7i75dHmnWQSnVi$HuD+2zfPVodbwfGQItmKWlJTpNkg6226iznYN0mD0TE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_user_4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-26T16:44:52.633Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}, {
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$5F3hJG1MWJlpTMrpCAiyEg$DY09cthb85p9o1hZGpU2AWatnwtiC4fNjyZ9m1z11rc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_user_5",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-26T16:44:59.216Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}]

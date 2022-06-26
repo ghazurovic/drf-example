@@ -1,0 +1,46 @@
+[{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Keyboard",
+    "price": "134.00",
+    "rating": 0.0,
+    "updated_at": "2022-06-26T16:45:24.557Z"
+  }
+}, {
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Headphones",
+    "price": "55.00",
+    "rating": 0.0,
+    "updated_at": "2022-06-26T16:45:30.514Z"
+  }
+}, {
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Display",
+    "price": "435.00",
+    "rating": 0.0,
+    "updated_at": "2022-06-26T16:45:36.976Z"
+  }
+}, {
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Notebook",
+    "price": "3500.00",
+    "rating": 0.0,
+    "updated_at": "2022-06-26T16:45:43.812Z"
+  }
+}, {
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Table",
+    "price": "1700.00",
+    "rating": 0.0,
+    "updated_at": "2022-06-26T16:45:54.467Z"
+  }
+}]
