@@ -1,6 +1,3 @@
-from django.db.models import Model
-
-
 def get_unique_or_none(model, **kwargs):
     """Gets unique or None for provided model.
     Args:
