@@ -9,6 +9,8 @@ RUN apk update \
 
 RUN python3 -m ensurepip && pip3 install --upgrade pip setuptools wheel
 
+WORKDIR /opt/backend
+
 COPY ./requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt
 
