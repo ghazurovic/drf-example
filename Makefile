@@ -20,3 +20,6 @@ migrate:
 
 add-admin:
 	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py add_superuser
+
+load-fixtures:
+	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py loaddata users.json products.json
