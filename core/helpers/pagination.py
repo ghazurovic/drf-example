@@ -22,7 +22,7 @@ class StandardResultsSetPagination(pagination.PageNumberPagination):
         Returns:
             Response: paginated response
         """
-        _page_size_param = self.request.query_params.get('page_size')
+        _page_size_param = self.request.query_params.get('page_size', 5)
         if int(_page_size_param) != self.page_size:
             self.actual_page_size = int(_page_size_param)
         else:
