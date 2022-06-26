@@ -14,5 +14,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def validate_rating(self, value):
         if value < 0 or value > 5:
-            raise serializers.ValidationError('Rating has to be between 1 and 10.')
+            raise serializers.ValidationError(
+                'Rating has to be between 0 and 5.'
+            )
         return value
