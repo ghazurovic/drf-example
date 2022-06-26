@@ -7,5 +7,5 @@ router = DefaultRouter()
 router.register(r'products', ProductsViewSet, basename='products')
 
 products_api = [
-    path('products/', include(router.urls)),
+    path('', include(router.urls)),
 ]
