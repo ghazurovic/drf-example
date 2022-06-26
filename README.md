@@ -36,3 +36,6 @@
 #### Available users
 - Users: `test_user_1`, `test_user_2`, `test_user_3`, `test_user_4`, `test_user_5`,
 - All user share same password: `Ldexw74ngG`
+
+### Run tests:
+- run command: `make run-tests`
