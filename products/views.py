@@ -44,10 +44,7 @@ class ProductsViewSet(viewsets.ModelViewSet):
         Instantiates and returns the list of permissions that this view
         requires.
         """
-        if self.action == 'list' or self.action == 'retrieve':
-            permission_classes = [AllowAny, ]
-        else:
-            permission_classes = [IsAuthenticated, ]
+        permission_classes = [AllowAny, ]
         return [permission() for permission in permission_classes]
 
     def not_found(self) -> typing.Optional[Response]:
@@ -115,3 +112,4 @@ class ProductReviewsViewSet(viewsets.ModelViewSet):
     """
     queryset = ProductReview.objects.all()
     serializer_class = ProductReviewSerializer
+    permission_classes = [IsAuthenticated, ]
