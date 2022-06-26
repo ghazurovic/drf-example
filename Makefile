@@ -10,19 +10,19 @@ docker-run:
 	env_file=${BACKEND_CONF} pg_env_file=${PGSQL_CONF} docker-compose up
 
 showmigrations:
-	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py showmigrations
+	docker exec -it drf-example_backend_1 python3 manage.py showmigrations
 
 makemigrations:
-	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py makemigrations
+	docker exec -it drf-example_backend_1 python3 manage.py makemigrations
 
 migrate:
-	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py migrate
+	docker exec -it drf-example_backend_1 python3 manage.py migrate
 
 add-admin:
-	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py add_superuser
+	docker exec -it drf-example_backend_1 python3 manage.py add_superuser
 
 load-fixtures:
-	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py loaddata users.json products.json
+	docker exec -it drf-example_backend_1 python3 manage.py loaddata users.json products.json
 
 run-tests:
 	docker exec -it drf-example_backend_1 pytest
