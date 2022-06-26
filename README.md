@@ -18,3 +18,8 @@
   * BACKEND_CONF -> path to backend conf or use default `backend.env`
   * PGSQL_CONF -> path to pgsql conf or default `postgres.env`
   * `env_file=${BACKEND_CONF} pg_env_file=${PGSQL_CONF} docker-compose up`
+
+- Apply migrations: -> `make migrate`
+- Create migrations for model changes -> `make makemigrations`
+- Create admin user to control Admin UI -> `make add_superuser`
+  * Credentials: `admin` / `Ldexw74ngG`
