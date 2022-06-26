@@ -1,4 +1,4 @@
-.PHONY: docker-run makemigrations migrate
+.PHONY: docker-run makemigrations migrate showmigrations-app makemigrations-app add-admin
 
 # if arg is not provided, fallback to default conf
 BACKEND_CONF := $(or $(BACKEND_CONF), backend.env)
@@ -9,8 +9,14 @@ docker-run:
 	@echo "*** Staring backend service using ${BACKEND_CONF}... ***"
 	env_file=${BACKEND_CONF} pg_env_file=${PGSQL_CONF} docker-compose up
 
+showmigrations:
+	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py showmigrations
+
 makemigrations:
 	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py makemigrations
 
 migrate:
 	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py migrate
+
+add-admin:
+	docker exec -it drf-example_backend_1 python3 opt/backend/manage.py add_superuser
