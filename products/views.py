@@ -107,7 +107,7 @@ class ProductsViewSet(viewsets.ModelViewSet):
 
 class ProductReviewsViewSet(viewsets.ModelViewSet):
     """
-    A viewset for viewing, creating,editing and deleting ProductReviewž
+    A viewset for viewing, creating,editing and deleting ProductReview
     instances.
     """
     queryset = ProductReview.objects.all()

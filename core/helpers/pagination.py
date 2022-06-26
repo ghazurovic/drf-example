@@ -43,6 +43,8 @@ class StandardResultsSetPagination(pagination.PageNumberPagination):
         })
 
     def calc_from_page(self):
+        """Calculate from page.
+        """
         _from_page = self.actual_page_size * self.page.number - \
             (self.actual_page_size - 1)
         if isinstance(_from_page, tuple):
@@ -51,6 +53,8 @@ class StandardResultsSetPagination(pagination.PageNumberPagination):
         return _from_page
 
     def calc_to_page(self):
+        """Calculate to page.
+        """
         _to_page = int(self.actual_page_size * self.page.number)
         if isinstance(_to_page, tuple):
             _to = _to_page[0] if _to_page[0] < self.page.paginator.count \
